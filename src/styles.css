@@ -7,20 +7,18 @@
 
 body {
   font-family: "Red Hat Text", system-ui;
-  padding: 70px 40px 0;
+  padding: 64px 48px 0;
   background-color: hsl(13, 31%, 94%);
   position: relative;
   margin-bottom: 64px;
 }
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 10px;
 }
-.orders-container::-webkit-scrollbar {
-  width: 5px;
-}
+
 ::-webkit-scrollbar-thumb {
   background: hsl(14, 86%, 42%);
-  border-radius: 25px;
+  border-radius: 12px;
 }
 button {
   cursor: pointer;
@@ -29,6 +27,6 @@ button {
 
 @media (max-width: 670px) {
   body {
-    padding: 20px 20px 0;
+    padding: 24px 24px 0;
   }
 }

@@ -8,14 +8,14 @@
   font-weight: 700;
 }
 .cart h2 {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   text-align: left;
   color: hsl(14, 86%, 42%);
 }
 .cart .empty-cart {
   color: hsl(12, 20%, 44%);
   font-weight: 500;
-  margin: 10px 0 20px;
+  margin: 12px 0 24px;
   font-size: 14px;
 }
 .cart .btn-order-remove {
@@ -24,7 +24,7 @@
   align-items: center;
   width: 20px;
   height: 20px;
-  font-size: 21px;
+  font-size: 20px;
   border-radius: 50%;
   border: 2px solid hsl(14, 25%, 72%);
   color: hsl(14, 25%, 72%);
@@ -43,7 +43,7 @@
   background-color: hsl(13, 31%, 94%);
   font-size: 14px;
   font-weight: 500;
-  padding: 15px 10px;
+  padding: 16px 12px;
   border-radius: 7px;
   color: hsl(12 20% 37% / 1);
   text-wrap: nowrap;
@@ -60,7 +60,7 @@
   align-items: center;
   width: 20px;
   height: 20px;
-  font-size: 21px;
+  font-size: 20px;
   border-radius: 50%;
   border: 2px solid hsl(14, 25%, 72%);
   color: hsl(14, 25%, 72%);
@@ -79,7 +79,7 @@
   background-color: hsl(13, 31%, 94%);
   font-size: 14px;
   font-weight: 500;
-  padding: 15px 10px;
+  padding: 16px 12px;
   border-radius: 7px;
   color: hsl(12 20% 37% / 1);
   text-wrap: nowrap;
@@ -93,9 +93,9 @@
 
 .btn-order {
   width: 100%;
-  margin-top: 25px;
-  padding: 20px 0;
-  font-size: 17px;
+  margin-top: 24px;
+  padding: 24px 0;
+  font-size: 16px;
   font-weight: 500;
   background-color: hsl(14, 86%, 42%);
   color: hsl(20, 50%, 98%);
@@ -116,14 +116,14 @@
   align-items: center;
   gap: 25px;
   border-bottom: 1px solid #0000001f;
-  padding: 20px 0 10px;
+  padding: 24px 0 12px;
 }
 .orders-container .order:first-child {
-  padding: 0 0 10px;
+  padding: 0 0 12px;
 }
 .orders-container .order-info p {
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: hsl(14, 65%, 9%);
 }
 .orders-container .order-counter {
@@ -137,20 +137,20 @@
   color: hsl(7, 20%, 60%);
 }
 .orders-container .order-info span {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 .order-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
+  padding: 24px 0;
 }
 .order-total .order-total-label {
   font-weight: 600;
   color: hsl(12 20% 37% / 1);
 }
 .order-total .order-total-price {
-  font-size: 28px;
+  font-size: 32px;
   color: hsl(14, 65%, 9%);
 }
 
@@ -167,7 +167,7 @@
   transform: translate(-50%, 50%);
   width: 40%;
   background-color: hsl(20, 50%, 98%);
-  padding: 25px;
+  padding: 24px;
   border-radius: 7px;
   z-index: 100;
 }
@@ -175,15 +175,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 .order-confirmed header img {
   height: 48px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .order-confirmed header h2 {
   color: hsl(14, 65%, 9%);
-  font-size: 30px;
+  font-size: 32px;
 }
 .order-confirmed header p {
   color: hsl(12, 20%, 44%);
@@ -191,8 +191,8 @@
 .order-confirmed .orders {
   background-color: hsl(13, 31%, 94%);
   border-radius: 7px;
-  padding: 20px;
-  padding-right: 10px;
+  padding: 24px;
+  padding-right: 12px;
   font-weight: 700;
 }
 .order-confirmed .orders .orders-container {
@@ -200,32 +200,30 @@
   overflow: auto;
 }
 .order-confirmed .order {
-  padding-right: 10px;
+  padding-right: 12px;
 }
 .order-confirmed .order:first-child {
-  padding: 0 10px 10px 0;
+  padding: 0 12px 12px 0;
 }
 .order-confirmed .order img {
   height: 55px;
   border-radius: 7px;
 }
-.order-confirmed .order .order-info {
+.order-confirmed .order-info {
   margin-right: auto;
   overflow: hidden;
 }
-.order-confirmed .order .order-info .order-name {
+.order-confirmed .order-info .order-name {
   text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
-.order-confirmed .order .order-info .order-price-each {
+.order-confirmed .order-info .order-price-each {
   color: hsl(12, 20%, 44%);
 }
-.order-confirmed .order .order-price {
+.order-confirmed .order-price {
   color: hsl(14, 65%, 9%);
 }
-.order-confirmed .orders .order-total {
-  padding: 25px 0 0;
+.order-confirmed .order-total {
+  padding: 24px 0 0;
 }
 .overlay {
   position: absolute;
@@ -234,7 +232,7 @@
   background-color: #00000073;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 999;
 }
 
 @media (max-width: 1240px) {
@@ -251,7 +249,7 @@
 
 @media (max-width: 670px) {
   .cart {
-    padding: 20px;
+    padding: 24px;
     width: 300px;
   }
 

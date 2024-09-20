@@ -32,7 +32,6 @@ export class DessertListComponent implements OnInit {
       },
       error: (error) => console.error('Error while fetching data:', error),
     });
-    // Listen to cart changes to reset items when removed
     this.cartService.cartItems$.subscribe((cartItems) => {
       this.resetItemStates(cartItems);
     });
@@ -75,7 +74,7 @@ export class DessertListComponent implements OnInit {
       name: item.name,
       price: item.price,
       quantity: item.quantity,
-      img: item.image.at(0),
+      img: item.image.thumbnail,
     };
     this.cartService.updateCartItem(cartItem);
     console.log(cartItem);

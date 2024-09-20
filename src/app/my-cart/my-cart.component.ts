@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MyCartComponent implements OnInit {
   cartItems: CartItem[] = [];
-  isOrderConfirmed = false; // Add this property to control the overlay
+  isOrderConfirmed = false;
 
   constructor(private cartService: CartService) {}
 
@@ -33,12 +33,11 @@ export class MyCartComponent implements OnInit {
   }
 
   confirmOrder() {
-    this.isOrderConfirmed = true; // Show overlay when order is confirmed
+    this.isOrderConfirmed = true;
   }
 
   startNewOrder() {
-    this.isOrderConfirmed = false; // Reset the overlay visibility for new order
-    // Clear cart if needed
+    this.isOrderConfirmed = false;
     this.cartService.clearCart();
   }
 }

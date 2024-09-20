@@ -1,14 +1,14 @@
 .container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 32px;
 }
 
 .desserts {
   max-width: 790px;
 }
 .desserts h1 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 .card-container {
   display: flex;
@@ -28,9 +28,9 @@
 }
 .card h3 {
   color: hsl(7, 20%, 60%);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  margin-top: 25px;
+  margin-top: 24px;
 }
 .card h4 {
   color: hsl(14, 65%, 9%);
@@ -71,19 +71,13 @@
 .btn-add-cart img {
   flex: 0 1;
   height: 20px;
-  margin-right: 7px;
+  margin-right: 8px;
 }
 .btn-add-cart:hover {
   color: hsl(14, 86%, 42%);
   border: 1px solidhsl(14, 86%, 42%);
 }
-.btn-add-cart-clicked {
-  background-color: hsl(14, 86%, 42%);
-  color: hsl(20, 50%, 98%);
-  border: none;
-  transform: scale(1.05) translateX(-47.5%);
-}
-/* ------------------------------------------------------- */
+
 .btn-add-cart .added {
   display: flex;
   align-items: center;
@@ -124,24 +118,13 @@
   .desserts {
     max-width: 520px;
   }
-  .order-confirmed {
-    width: 50%;
-  }
 }
 @media (max-width: 970px) {
   .desserts {
     max-width: 300px;
   }
-
-  .order-confirmed {
-    width: 70%;
-  }
 }
 @media (max-width: 670px) {
-  body {
-    padding: 20px 20px 0;
-  }
-
   .container {
     flex-flow: wrap;
   }
@@ -151,16 +134,5 @@
   }
   .card > img {
     height: 220px;
-  }
-
-  .cart {
-    padding: 20px;
-    width: 300px;
-  }
-
-  .order-confirmed {
-    width: 100%;
-    bottom: 0;
-    transform: translate(-50%, 0);
   }
 }

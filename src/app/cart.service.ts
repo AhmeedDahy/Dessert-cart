@@ -42,6 +42,6 @@ export class CartService {
     }
   }
   clearCart() {
-    this.cartItems.next([]); // Clears the cart
+    this.cartItems.next([]);
   }
 }
