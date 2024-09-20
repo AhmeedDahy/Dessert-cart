@@ -1,0 +1,166 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.desserts {
+  max-width: 790px;
+}
+.desserts h1 {
+  margin-bottom: 20px;
+}
+.card-container {
+  display: flex;
+  flex-flow: wrap;
+  gap: 20px;
+}
+.card {
+  width: 250px;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  border-radius: 7px;
+  &.des {
+    margin-bottom: 24px;
+  }
+}
+.card h3 {
+  color: hsl(7, 20%, 60%);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 25px;
+}
+.card h4 {
+  color: hsl(14, 65%, 9%);
+  font-weight: 700;
+}
+.card p {
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+}
+.btn-add-cart {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 4px;
+  width: 150px;
+  height: 42px;
+  border-radius: 25px;
+  background-color: hsl(20, 50%, 98%);
+  color: hsl(14, 65%, 9%);
+  border: 1px solid hsl(12, 20%, 44%);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-add-cart span {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.btn-add-cart img {
+  flex: 0 1;
+  height: 20px;
+  margin-right: 7px;
+}
+.btn-add-cart:hover {
+  color: hsl(14, 86%, 42%);
+  border: 1px solidhsl(14, 86%, 42%);
+}
+.btn-add-cart-clicked {
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  border: none;
+  transform: scale(1.05) translateX(-47.5%);
+}
+/* ------------------------------------------------------- */
+.btn-add-cart .added {
+  display: flex;
+  align-items: center;
+}
+
+.btn-add-cart button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  border: 1px solid hsl(20, 50%, 98%);
+  transition: all 0.3s;
+}
+
+.btn-add-cart button:hover {
+  color: hsl(14, 86%, 42%);
+  background-color: hsl(20, 50%, 98%);
+}
+.btn-add-cart button:active {
+  color: hsl(20, 50%, 98%);
+  background-color: hsl(14, 86%, 42%);
+}
+.btn-add-cart .decrement {
+  left: 10px;
+}
+.btn-add-cart .increment {
+  right: 10px;
+  align-items: center;
+  font-size: 20px;
+}
+
+@media (max-width: 1240px) {
+  .desserts {
+    max-width: 520px;
+  }
+  .order-confirmed {
+    width: 50%;
+  }
+}
+@media (max-width: 970px) {
+  .desserts {
+    max-width: 300px;
+  }
+
+  .order-confirmed {
+    width: 70%;
+  }
+}
+@media (max-width: 670px) {
+  body {
+    padding: 20px 20px 0;
+  }
+
+  .container {
+    flex-flow: wrap;
+  }
+
+  .card {
+    width: 300px;
+  }
+  .card > img {
+    height: 220px;
+  }
+
+  .cart {
+    padding: 20px;
+    width: 300px;
+  }
+
+  .order-confirmed {
+    width: 100%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+  }
+}

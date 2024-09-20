@@ -1,0 +1,87 @@
+<div class="cart">
+  <h2>Your Cart ({{ cartItems.length }})</h2>
+  <img
+    src="assets/images/illustration-empty-cart.svg"
+    alt="empty cart"
+    *ngIf="cartItems.length === 0"
+  />
+  <p class="empty-cart" *ngIf="cartItems.length === 0">
+    Your added items will appear here
+  </p>
+  <div *ngIf="cartItems.length > 0">
+    <div
+      class="orders-container cart-orders-container"
+      *ngFor="let item of cartItems"
+    >
+      <div class="order ${category}">
+        <div class="order-info">
+          <p class="order-name">{{ item.name }}</p>
+
+          <p>
+            <span class="order-counter">{{ item.quantity }}x</span>
+            <span class="order-price"
+              >{{ "@" }}{{ item.price | currency }}</span
+            >
+            <span class="order-total-price">{{
+              item.quantity * item.price | currency
+            }}</span>
+          </p>
+        </div>
+        <button class="btn-order-remove" (click)="removeFromCart(item.id)">
+          ⨯
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="order-confirm" *ngIf="cartItems.length > 0">
+    <div class="order-total">
+      <p class="order-total-label">Order Total</p>
+      <p class="order-total-price">{{ getTotalPrice() | currency }}</p>
+    </div>
+    <div class="carbon-neutral">
+      <img
+        src="assets/images/icon-carbon-neutral.svg"
+        alt="carbon neutral"
+      />This is a <span>carbon-neutral</span> delivery
+    </div>
+    <button class="btn-confirm-order btn-order" (click)="confirmOrder()">
+      Confirm Order
+    </button>
+  </div>
+</div>
+
+<!-- Overlay to show when order is confirmed -->
+<div class="overlay" *ngIf="isOrderConfirmed">
+  <div class="order-confirmed">
+    <header>
+      <img src="assets/images/icon-order-confirmed.svg" alt="confirmed" />
+      <h2>Order Confirmed</h2>
+      <p>We hope you enjoy your food!</p>
+    </header>
+    <div class="orders" *ngFor="let item of cartItems">
+      <div class="orders-container confirm-orders-container">
+        <div class="order">
+          <img src="{{ item.img }}" alt="{{ item.name }}" />
+          <div class="order-info">
+            <p class="order-name">{{ item.name }}</p>
+            <p>
+              <span class="order-counter">{{ item.quantity }}x</span>
+              <span class="order-price-each">{{ item.price | currency }}</span>
+            </p>
+          </div>
+          <span class="order-price">{{ getTotalPrice() | currency }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-total">
+      <p class="order-total-label">Order Total</p>
+      <p class="order-total-price">{{ getTotalPrice() | currency }}</p>
+    </div>
+
+    <button class="btn-new-order btn-order" (click)="startNewOrder()">
+      Start New Order
+    </button>
+  </div>
+</div>

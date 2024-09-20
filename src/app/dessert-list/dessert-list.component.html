@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="desserts">
+    <h1>Desserts</h1>
+    <div class="card-container">
+      <div class="card" *ngFor="let dessert of data">
+        <img
+          class="des"
+          [src]="dessert.image.desktop"
+          alt="{{ dessert.name }}"
+        />
+        <h4>{{ dessert.name }}</h4>
+        <p class="category">{{ dessert.category }}</p>
+        <p class="price">{{ dessert.price.toFixed(2) }} $</p>
+        <div class="btn-add-cart">
+          <span *ngIf="!dessert.inCart" (click)="addToCart(dessert)"
+            ><img src="assets/images/icon-add-to-cart.svg" />Add to Cart</span
+          >
+          <div class="added" *ngIf="dessert.inCart">
+            <button class="decrement" (click)="decrement(dessert)">
+              &minus;
+            </button>
+            <span>{{ dessert.quantity }}</span>
+            <button class="increment" (click)="increment(dessert)">
+              &plus;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-my-cart></app-my-cart>
+</div>
