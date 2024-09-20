@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
-  private dataUrl = 'http://localhost:3000/products';
+  private dataUrl = 'https://my-json-server.typicode.com/AhmeedDahy/Dessert-cart/products';
 
   constructor(private http: HttpClient) {}
 
